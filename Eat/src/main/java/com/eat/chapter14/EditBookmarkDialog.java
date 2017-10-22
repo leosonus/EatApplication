@@ -12,16 +12,16 @@ import com.eat.R;
 
 public class EditBookmarkDialog extends DialogFragment {
 
-    static EditBookmarkDialog newInstance(ChromeBookmarkActivity.ChromeBookmarkAsyncHandler asyncQueryHandler) {
-        EditBookmarkDialog dialog = new EditBookmarkDialog(asyncQueryHandler);
-        return dialog;
-    }
-
-    ChromeBookmarkActivity.ChromeBookmarkAsyncHandler mAsyncQueryHandler;
-
-    public EditBookmarkDialog(ChromeBookmarkActivity.ChromeBookmarkAsyncHandler asyncQueryHandler) {
-        mAsyncQueryHandler = asyncQueryHandler;
-    }
+//    static EditBookmarkDialog newInstance(ChromeBookmarkActivity.ChromeBookmarkAsyncHandler asyncQueryHandler) {
+//        EditBookmarkDialog dialog = new EditBookmarkDialog(asyncQueryHandler);
+//        return dialog;
+//    }
+//
+//    ChromeBookmarkActivity.ChromeBookmarkAsyncHandler mAsyncQueryHandler;
+//
+//    public EditBookmarkDialog(ChromeBookmarkActivity.ChromeBookmarkAsyncHandler asyncQueryHandler) {
+//        mAsyncQueryHandler = asyncQueryHandler;
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,15 +30,15 @@ public class EditBookmarkDialog extends DialogFragment {
         final EditText editName = (EditText) v.findViewById(R.id.edit_name);
         final EditText editUrl = (EditText) v.findViewById(R.id.edit_url);
         Button buttonSave = (Button) v.findViewById(R.id.button_save);
-
-        buttonSave.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String name = editName.getText().toString();
-                String url = editUrl.getText().toString();
-                mAsyncQueryHandler.insert(name, url);
-                dismiss();
-            }
-        });
+//
+//        buttonSave.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                String name = editName.getText().toString();
+//                String url = editUrl.getText().toString();
+//                mAsyncQueryHandler.insert(name, url);
+//                dismiss();
+//            }
+//        });
 
         return v;
     }
